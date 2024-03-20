@@ -6,6 +6,8 @@ class DayPeriodChecker:
     """
     Check the periode of the day using system Time
     @author : Ahmed Bouzidia
+    @author : ahmed.bouzidia@ecoles-epsi.net
+    @version : 20-03-2024
     """
     def __init__(self):
         pass

@@ -5,6 +5,8 @@ class FrenchVocab(Vocabulary):
     French Vocabulary 
     Inherits from the class Vocabulary
     @author: Ahmed Bouzidia
+    @author : ahmed.bouzidia@ecoles-epsi.net
+    @version : 20-03-2024
     """
 
     def getMorningSalutation(self):

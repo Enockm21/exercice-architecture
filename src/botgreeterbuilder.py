@@ -9,6 +9,13 @@ from engvocabulary import EngVocab
 from dayperiodchecker import DayPeriodChecker
 
 class BotGreeterBuilder:
+    """
+    A class that implements a Builder Design Pattern
+    It's used to creat an instance of the class BotGreeter
+    @author : ahmed.bouzidia@ecoles-epsi.net
+    @version : 20-03-2024
+    """
+
     def __init__(self):
         self.system_lang_detector = SystemLanguageDetector()
         self.vocab: Optional[Vocabulary] = None

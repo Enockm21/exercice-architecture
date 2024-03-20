@@ -1,4 +1,11 @@
 class Palindrome:
+    """
+    This class define  palindrome detecter 
+    @author: Ahmed Bouzidia
+    @author : ahmed.bouzidia@ecoles-epsi.net
+    @version : 20-03-2024
+    """
+
     def __init__(self, inputText):
         self.inputText = inputText
         self.palindrome = ""

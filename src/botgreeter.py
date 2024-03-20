@@ -10,9 +10,11 @@ from dayperiodegrammar import DayPeriodGrammar
 
 class BotGreeter:
     """
-    This class  represents a greeter  
+    This class  represents a greeter  : comme un receptionnniste qui acceuil l'utilisateur 
     It will be used in the Dashboard (console or API) to say hello and goodbye
     @author : Ahmed Bouzidia
+    @author : ahmed.bouzidia@ecoles-epsi.net
+    @version : 20-03-2024
     """
     def __init__(self, vocab: Vocabulary, periodeChecker: DayPeriodChecker):
         self.vocab: Vocabulary = vocab

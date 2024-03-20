@@ -5,6 +5,8 @@ class SystemLanguageDetector:
     This class defines the system languages.
     It will be used in BotGreeterBuilder.
     @author: Ahmed Bouzidia
+    @author : ahmed.bouzidia@ecoles-epsi.net
+    @version : 20-03-2024
     """
 
     def __init__(self):
