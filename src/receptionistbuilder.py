@@ -1,9 +1,11 @@
-from botgreeter import BotGreeter
+
 from systemlanguagedetector import SystemLanguageDetector
 from vocabulary import Vocabulary
 from frenchvocabulary import FrenchVocab
 from engvocabulary import EngVocab
 from dayperiodchecker import DayPeriodChecker
+
+from receptionist import Receptionist
 
     #Ahmed Service : repository
 
@@ -18,7 +20,7 @@ class ReceptionistBuilder:
     def __init__(self):
         self.system_lang_detector = SystemLanguageDetector()
         self.vocab: Optional[Vocabulary] = None
-        self.periode_checker: Optional[PeriodeChecker] = DayPeriodChecker()
+        self.periode_checker = DayPeriodChecker()
 
     def set_vocab(self, vocab: Vocabulary) -> "BotGreeterBuilder":
         self.vocab = vocab
@@ -37,4 +39,4 @@ class ReceptionistBuilder:
                 self.vocab = EngVocab()
         if self.periode_checker is None:
             raise ValueError("PeriodeChecker is not set")
-        return BotGreeter(self.vocab, self.periode_checker)
+        return Receptionist(self.vocab, self.periode_checker)
