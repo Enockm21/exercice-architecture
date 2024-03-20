@@ -14,11 +14,11 @@ It will be used in the Dashboard (console or API) to say hello and goodbye
 
     def greet(self) -> str:
         period = self.periodeChecker.get_day_period()
-        if period == "Matin":
+        if period == DayPeriodGrammar.MORNING:
             return f"{self.vocab.getMorningSalutation()}!"
-        elif period == "Après-midi":
+        elif period == DayPeriodGrammar.AFTERNOON:
             return f"{self.vocab.getAfternoonSalutation()}!"
-        elif period == "Soir":
+        elif period == DayPeriodGrammar.EVENING:
             return f"{self.vocab.getNightSalutation()}!"
         else:
             return "Bonjour, monde!"  # Fallback greeting if period is unknown

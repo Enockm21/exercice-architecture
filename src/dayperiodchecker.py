@@ -14,11 +14,11 @@ Check the periode of the day using system Time
 
         # Déterminer la période de la journée en fonction de l'heure
         if current_hour < 12:
-            return "Matin"
+            return DayPeriodGrammar.MORNING
         elif current_hour < 18:
-            return "Après-midi"
+            return DayPeriodGrammar.AFTERNOON
         else:
-            return "Soir"
+            return DayPeriodGrammar.EVENING 
 
 # Exemple d'utilisation
 if __name__ == "__main__":
