@@ -1,32 +1,12 @@
 import datetime
-
+import json
+ 
 class MirrorApp:
+    traductionfile= open('traduction.json')
+    traduction = json.load(traductionfile)
+
     def __init__(self, language='en'):
         self.language = language
-        self.greetings = {
-            'fr': {
-                'morning': 'Bonjour',
-                'afternoon': 'Bon après-midi',
-                'evening': 'Bonsoir'
-            },
-            'en': {
-                'morning': 'Good morning',
-                'afternoon': 'Good afternoon',
-                'evening': 'Good evening'
-            }
-        }
-        self.farewells = {
-            'fr': {
-                'morning': 'Au revoir',
-                'afternoon': 'Au revoir',
-                'evening': 'Bonne nuit'
-            },
-            'en': {
-                'morning': 'Goodbye',
-                'afternoon': 'Goodbye',
-                'evening': 'Good night'
-            }
-        }
 
     def get_time_of_day(self):
         hour = datetime.datetime.now().hour
@@ -39,29 +19,28 @@ class MirrorApp:
 
     def greet(self):
         time_of_day = self.get_time_of_day()
-        print(self.greetings[self.language][time_of_day])
+        print(self.traduction["greetings"][self.language][time_of_day])
 
     def farewell(self):
         time_of_day = self.get_time_of_day()
-        print(self.farewells[self.language][time_of_day])
-
+        print(self.traduction["farewells"][self.language][time_of_day])    
     @staticmethod
     def is_palindrome(s):
         return s == s[::-1]
+    def congratulate(self,word):
+        print(self.is_palindrome(word))
+        print(self.traduction["expression"][self.language]["goodjob"])
+
+
 
     def run(self):
-            self.greet()
-            user_input = input("Écrivez quelque chose: ").strip()
-            if self.is_palindrome(user_input.replace(" ", "").lower()):
-                if self.language == 'fr':
-                    print(user_input[::-1])
-                    print("Bien dit !")
-                else:
-                    print(user_input[::-1])
-                    print("Well said!")
-            else:
-                print(user_input[::-1])
-            self.farewell()
+        self.greet()
+        user_input = input(self.traduction["expression"][self.language]["writesomething"]).strip().replace(" ", "").lower()
+        if self.is_palindrome(user_input):
+            self.congratulate(user_input)
+        else:
+            print(user_input[::-1])
+        self.farewell()
 if __name__ == "__main__":
     language = input("Choisissez votre langue (fr/en): ").lower()
     app = MirrorApp(language)
