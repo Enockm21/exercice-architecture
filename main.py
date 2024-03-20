@@ -1,12 +1,20 @@
 import datetime
 import json
+import locale
  
 class MirrorApp:
     traductionfile= open('traduction.json')
     traduction = json.load(traductionfile)
+    default_langage='en'
+    lang,_= locale.getlocale()
+    if lang:
+        lang= lang.split("_")[0]
+        language = lang
+    else:
+      language= default_langage
+    def __init__(self, ):
+        pass
 
-    def __init__(self, language='en'):
-        self.language = language
 
     def get_time_of_day(self):
         hour = datetime.datetime.now().hour
@@ -42,8 +50,7 @@ class MirrorApp:
             print(user_input[::-1])
         self.farewell()
 if __name__ == "__main__":
-    language = input("Choisissez votre langue (fr/en): ").lower()
-    app = MirrorApp(language)
+    app = MirrorApp()
     app.run()
 
 
