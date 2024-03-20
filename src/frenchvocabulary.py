@@ -1,9 +1,12 @@
+from vocabulary import Vocabulary
+
 class FrenchVocab(Vocabulary):
-"""
-French Vocabulary 
-Inherite form the class Vocabulary
-@author : Ahmed Bouzidia
-"""
+    """
+    French Vocabulary 
+    Inherits from the class Vocabulary
+    @author: Ahmed Bouzidia
+    """
+
     def getMorningSalutation(self):
         return "Bonjour"
 
@@ -15,3 +18,9 @@ Inherite form the class Vocabulary
 
     def sayGoodbye(self):
         return "Au revoir"
+    
+    def feliciter(self):
+        return "Bien dit !"
+
+    def blam(self):
+        return "Ce n'est pas un palindrome !" 

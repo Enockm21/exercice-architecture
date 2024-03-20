@@ -1,14 +1,20 @@
 from typing import Any
-from Vocabulary import Vocabulary
-from PeriodeChecker import PeriodeChecker
+
+from dayperiodchecker   import DayPeriodChecker
+from vocabulary import Vocabulary
+from engvocabulary import EngVocab
+from frenchvocabulary  import FrenchVocab
+from dayperiodegrammar import DayPeriodGrammar
+
+
 
 class BotGreeter:
-"""
-This class  represents a greeter  
-It will be used in the Dashboard (console or API) to say hello and goodbye
-@author : Ahmed Bouzidia
-"""
-    def __init__(self, vocab: Vocabulary, periodeChecker: PeriodeChecker):
+    """
+    This class  represents a greeter  
+    It will be used in the Dashboard (console or API) to say hello and goodbye
+    @author : Ahmed Bouzidia
+    """
+    def __init__(self, vocab: Vocabulary, periodeChecker: DayPeriodChecker):
         self.vocab: Vocabulary = vocab
         self.periodeChecker: PeriodeChecker = periodeChecker
 
@@ -25,3 +31,10 @@ It will be used in the Dashboard (console or API) to say hello and goodbye
 
     def say_goodbye(self) -> str:
         return f"{self.vocab.sayGoodbye()}!"
+
+    def blam(self):
+        return  f"{self.vocab.blam()}!"
+
+    def feliciter(self):
+        return  f"{self.vocab.feliciter()}!"
+

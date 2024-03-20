@@ -1,19 +1,24 @@
 #from Vocabulary import Vocabulary, EngVocab, FrenchVocab
 
-from PeriodeChecker import PeriodeChecker
-from SystemLanguageDetector import SystemLanguageDetector
+
+from botgreeter import BotGreeter
+from systemlanguagedetector import SystemLanguageDetector
+from vocabulary import Vocabulary
+from frenchvocabulary import FrenchVocab
+from engvocabulary import EngVocab
+from dayperiodchecker import DayPeriodChecker
 
 class BotGreeterBuilder:
     def __init__(self):
         self.system_lang_detector = SystemLanguageDetector()
         self.vocab: Optional[Vocabulary] = None
-        self.periode_checker: Optional[PeriodeChecker] = None
+        self.periode_checker: Optional[PeriodeChecker] = DayPeriodChecker()
 
     def set_vocab(self, vocab: Vocabulary) -> "BotGreeterBuilder":
         self.vocab = vocab
         return self
 
-    def set_periode_checker(self, periode_checker: PeriodeChecker) -> "BotGreeterBuilder":
+    def set_periode_checker(self, periode_checker: DayPeriodChecker) -> "BotGreeterBuilder":
         self.periode_checker = periode_checker
         return self
 

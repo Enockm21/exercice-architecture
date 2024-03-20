@@ -1,10 +1,12 @@
 import datetime
 
+from dayperiodegrammar import DayPeriodGrammar
+ 
 class DayPeriodChecker:
-"""
-Check the periode of the day using system Time
-@author : Ahmed Bouzidia
-"""
+    """
+    Check the periode of the day using system Time
+    @author : Ahmed Bouzidia
+    """
     def __init__(self):
         pass
 
