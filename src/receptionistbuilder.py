@@ -21,16 +21,16 @@ class ReceptionistBuilder:
         self.system_lang_detector = SystemLanguageDetector()
         self.vocab: Optional[Vocabulary] = None
         self.periode_checker = DayPeriodChecker()
+    
+   # def set_vocab(self, vocab: Vocabulary) -> "ReceptionistBuilder":
+    #    self.vocab = vocab
+     #   return self
 
-    def set_vocab(self, vocab: Vocabulary) -> "BotGreeterBuilder":
-        self.vocab = vocab
-        return self
+#    def set_periode_checker(self, periode_checker: DayPeriodChecker) -> "ReceptionistBuilder":
+ #       self.periode_checker = periode_checker
+  #      return self
 
-    def set_periode_checker(self, periode_checker: DayPeriodChecker) -> "BotGreeterBuilder":
-        self.periode_checker = periode_checker
-        return self
-
-    def build(self) -> "BotGreeter":
+    def build(self) -> "ReceptionistBuilder":
         if self.vocab is None:
             system_lang = self.system_lang_detector.get_system_language()
             if system_lang.startswith("fr"):

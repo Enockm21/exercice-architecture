@@ -13,7 +13,7 @@ class Palindrome:
         self.palindrome = ""
         self.result = False
 
-    def get_palindrome(self):
+    def get_palindrome(self):  #supprime le setText et ajouter un parametre texte 
         # Remove non-alphanumeric characters and convert to lowercase
         cleaned_text = ''.join(char.lower() for char in self.inputText if char.isalnum())
         

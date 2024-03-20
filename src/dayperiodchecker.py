@@ -3,7 +3,7 @@ import datetime
 from dayperiodegrammar import DayPeriodGrammar
  
     #Ahmed  Service 
-class DayPeriodChecker:
+class DayPeriodChecker:  #Clock
     """
     Check the periode of the day using system Time
     @author : Ahmed Bouzidia

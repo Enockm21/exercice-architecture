@@ -11,7 +11,7 @@ class ConsoleBuilder:
     @author : ahmed.bouzidia@ecoles-epsi.net
     @version : 20-03-2024
     """
-    def build(self):
+    def build(self):  # mettre tout dans le constructeur car c'est simple 
         receptionistBuilder = ReceptionistBuilder()
         receptionist = receptionistBuilder.build()
         palindrome = Palindrome(" ")
