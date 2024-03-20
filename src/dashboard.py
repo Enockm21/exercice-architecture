@@ -1,13 +1,14 @@
 from palindrome import Palindrome
 from botgreeter import BotGreeter
 
+            #Ahmed : Objet valeur
 class Dashboard:
     """
     This class represents a console that will be launched on the terminal
     It represents the interface wich interact with the user
     @author : ahmed.bouzidia@ecoles-epsi.net
     @version : 20-03-2024
-    
+
     """
     
     def __init__(self, palindrome, botGreeter):

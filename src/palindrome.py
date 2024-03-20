@@ -1,3 +1,5 @@
+
+        #Ahmed  Object valeur 
 class Palindrome:
     """
     This class define  palindrome detecter 

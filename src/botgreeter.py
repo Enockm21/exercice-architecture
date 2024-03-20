@@ -7,7 +7,7 @@ from frenchvocabulary  import FrenchVocab
 from dayperiodegrammar import DayPeriodGrammar
 
 
-
+               #Ahmed : Entité 
 class BotGreeter:
     """
     This class  represents a greeter  : comme un receptionnniste qui acceuil l'utilisateur 

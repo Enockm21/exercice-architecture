@@ -1,5 +1,7 @@
 import locale
 
+    #Ahmed Service
+    
 class SystemLanguageDetector:
     """
     This class defines the system languages.

@@ -1,11 +1,13 @@
 import abc
 
+    #Ahmed  Service
+    
 class Vocabulary(abc.ABC):
     """
     Abstract class that represnete a vocabulary
     @author : ahmed.bouzidia@ecoles-epsi.net
     @version : 20-03-2024
-    
+
     """
     # Méthodes abstraites
     @abc.abstractmethod
