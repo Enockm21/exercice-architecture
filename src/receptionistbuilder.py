@@ -7,7 +7,7 @@ from dayperiodchecker import DayPeriodChecker
 
     #Ahmed Service : repository
 
-class BotGreeterBuilder:
+class ReceptionistBuilder:
     """
     A class that implements a Builder Design Pattern
     It's used to creat an instance of the class BotGreeter

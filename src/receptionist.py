@@ -7,8 +7,8 @@ from frenchvocabulary  import FrenchVocab
 from dayperiodegrammar import DayPeriodGrammar
 
 
-               #Ahmed : Entité 
-class BotGreeter:
+                
+class Receptionist:
     """
     This class  represents a greeter  : comme un receptionnniste qui acceuil l'utilisateur 
     It will be used in the Dashboard (console or API) to say hello and goodbye

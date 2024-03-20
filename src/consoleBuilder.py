@@ -1,10 +1,10 @@
 from palindrome import Palindrome
 from botgreeter import BotGreeter
-from  botgreeterbuilder import BotGreeterBuilder
-from dashboard import Dashboard
+from receptionistbuilder import ReceptionistBuilder
+from console import Console
 
 		#Ahmed Service
-class DashboardBuilder:
+class ConsoleBuilder:
 	"""
 	This class is a builder
 	Implement a Bilder Design Patter
@@ -13,8 +13,8 @@ class DashboardBuilder:
     @version : 20-03-2024
 	"""
     def build(self):
-        botBuilder = BotGreeterBuilder()
-        botGreeter = botBuilder.build()
+        receptionistBuilder = ReceptionistBuilder()
+        receptionist = receptionistBuilder.build()
         palindrome = Palindrome(" ")
-        dashboard = Dashboard(palindrome,botGreeter)
-        return dashboard
+        console  = Console(palindrome,receptionist)
+        return console
