@@ -1,4 +1,4 @@
-class DayPeriodGrammar:
+class ClockGrammar:
     """
     This class contains the day periods defined as constants
     It will be used in DayPeriodChecker and BotGreeter.

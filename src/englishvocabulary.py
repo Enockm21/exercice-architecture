@@ -2,7 +2,7 @@ from vocabulary import Vocabulary
 
     #Ahmed Service
     
-class EngVocab(Vocabulary):
+class EnglishVocabulary(Vocabulary):
     """
     English Vocabulary 
     Inherits from the class Vocabulary

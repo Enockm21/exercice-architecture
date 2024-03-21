@@ -1,9 +1,9 @@
 
 from systemlanguagedetector import SystemLanguageDetector
 from vocabulary import Vocabulary
-from frenchvocabulary import FrenchVocab
-from engvocabulary import EngVocab
-from dayperiodchecker import DayPeriodChecker
+from frenchvocabulary import FrenchVocabulary
+from englishvocabulary import EnglishVocabulary
+from clock import Clock
 
 from receptionist import Receptionist
 
@@ -20,7 +20,7 @@ class ReceptionistBuilder:
     def __init__(self):
         self.system_lang_detector = SystemLanguageDetector()
         self.vocab: Optional[Vocabulary] = None
-        self.periode_checker = DayPeriodChecker()
+        self.clock = Clock()
     
    # def set_vocab(self, vocab: Vocabulary) -> "ReceptionistBuilder":
     #    self.vocab = vocab
@@ -34,9 +34,9 @@ class ReceptionistBuilder:
         if self.vocab is None:
             system_lang = self.system_lang_detector.get_system_language()
             if system_lang.startswith("fr"):
-                self.vocab = FrenchVocab()
+                self.vocab = FrenchVocabulary()
             else:
-                self.vocab = EngVocab()
-        if self.periode_checker is None:
-            raise ValueError("PeriodeChecker is not set")
-        return Receptionist(self.vocab, self.periode_checker)
+                self.vocab = EnglishVocabulary()
+        if self.clock is None:
+            raise ValueError("Clock  is not set")
+        return Receptionist(self.vocab, self.clock)

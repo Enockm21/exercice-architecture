@@ -2,7 +2,7 @@ from palindrome import Palindrome
 from receptionistbuilder import ReceptionistBuilder
 from console import Console
 
-# Ahmed Service
+# Obsolete : on a remplacé par un code dans le main.py
 class ConsoleBuilder:
     """
     This class is a builder

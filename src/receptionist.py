@@ -1,11 +1,10 @@
 from typing import Any
-
-from dayperiodchecker   import DayPeriodChecker
+from clock  import Clock
 from vocabulary import Vocabulary
-from engvocabulary import EngVocab
-from frenchvocabulary  import FrenchVocab
-from dayperiodegrammar import DayPeriodGrammar
+from englishvocabulary import EnglishVocabulary 
+from frenchvocabulary  import FrenchVocabulary
 
+from clockgrammar import ClockGrammar
 
                 
 class Receptionist:
@@ -16,27 +15,27 @@ class Receptionist:
     @author : ahmed.bouzidia@ecoles-epsi.net
     @version : 20-03-2024
     """
-    def __init__(self, vocab: Vocabulary, periodeChecker: DayPeriodChecker):
-        self.vocab: Vocabulary = vocab
-        self.periodeChecker: PeriodeChecker = periodeChecker
+    def __init__(self, vocabulary: Vocabulary, clock: Clock):
+        self.vocabulary: Vocabulary = vocabulary
+        self.clock : Clock = clock
 
     def greet(self) -> str:
-        period = self.periodeChecker.get_day_period()
-        if period == DayPeriodGrammar.MORNING:
-            return f"{self.vocab.getMorningSalutation()}!"
-        elif period == DayPeriodGrammar.AFTERNOON:
-            return f"{self.vocab.getAfternoonSalutation()}!"
-        elif period == DayPeriodGrammar.EVENING:
-            return f"{self.vocab.getNightSalutation()}!"
+        period = self.clock.get_day_period()
+        if period == ClockGrammar.MORNING:
+            return f"{self.vocabulary.getMorningSalutation()}!"
+        elif period == ClockGrammar.AFTERNOON:
+            return f"{self.vocabulary.getAfternoonSalutation()}!"
+        elif period == ClockGrammar.EVENING:
+            return f"{self.vocabulary.getNightSalutation()}!"
         else:
             return "Bonjour, monde!"  # Fallback greeting if period is unknown
 
     def say_goodbye(self) -> str:
-        return f"{self.vocab.sayGoodbye()}!"
+        return f"{self.vocabulary.sayGoodbye()}!"
 
     def blam(self):
-        return  f"{self.vocab.blam()}!"
+        return  f"{self.vocabulary.blam()}!"
 
     def feliciter(self):
-        return  f"{self.vocab.feliciter()}!"
+        return  f"{self.vocabulary.feliciter()}!"
 

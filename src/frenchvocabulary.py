@@ -2,7 +2,7 @@ from vocabulary import Vocabulary
 
     #Ahmed : Service 
 
-class FrenchVocab(Vocabulary):
+class FrenchVocabulary(Vocabulary):
     """
     French Vocabulary 
     Inherits from the class Vocabulary
