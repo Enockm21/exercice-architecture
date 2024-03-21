@@ -1,10 +1,14 @@
 import abc
 
+    #Ahmed  Service
+    
 class Vocabulary(abc.ABC):
-"""
-Abstract class that represnete a vocabulary
-@author : Ahmed Bouzidia
-"""
+    """
+    Abstract class that represnete a vocabulary
+    @author : ahmed.bouzidia@ecoles-epsi.net
+    @version : 20-03-2024
+
+    """
     # Méthodes abstraites
     @abc.abstractmethod
     def getMorningSalutation(self):
@@ -21,3 +25,10 @@ Abstract class that represnete a vocabulary
     @abc.abstractmethod
     def sayGoodbye(self):
         pass
+    @abc.abstractmethod
+    def feliciter(self):  
+        pass   
+
+    @abc.abstractmethod
+    def blam(self):  
+        pass   

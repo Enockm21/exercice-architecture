@@ -1,0 +1,36 @@
+{"greetings":{
+    "fr": {
+        "morning": "Bonjour",
+        "afternoon": "Bon après-midi",
+        "evening": "Bonsoir"
+    },
+    "en": {
+        "morning": "Good morning",
+        "afternoon": "Good afternoon",
+        "evening": "Good evening"
+    } 
+  },
+  "farewells":{
+    "fr": {
+        "morning": "Au revoir",
+        "afternoon": "Au revoir",
+        "evening": "Bonne nuit"
+    },
+    "en": {
+        "morning": "Goodbye",
+        "afternoon": "Goodbye",
+        "evening": "Good night"
+    }
+    
+   },
+   "expression":{
+    "fr": {
+        "goodjob": "Bien dit",
+        "writesomething":"Écrivez quelque chose: "
+    },
+    "en": {
+        "goodjob": "Well said ",
+        "writesomething":"Write something : "
+    }
+}
+}

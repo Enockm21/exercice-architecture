@@ -1,10 +1,15 @@
 import datetime
 
-class DayPeriodChecker:
-"""
-Check the periode of the day using system Time
-@author : Ahmed Bouzidia
-"""
+from dayperiodegrammar import DayPeriodGrammar
+ 
+    #Ahmed  Service 
+class DayPeriodChecker:  #Clock
+    """
+    Check the periode of the day using system Time
+    @author : Ahmed Bouzidia
+    @author : ahmed.bouzidia@ecoles-epsi.net
+    @version : 20-03-2024
+    """
     def __init__(self):
         pass
 
@@ -14,11 +19,11 @@ Check the periode of the day using system Time
 
         # Déterminer la période de la journée en fonction de l'heure
         if current_hour < 12:
-            return "Matin"
+            return DayPeriodGrammar.MORNING
         elif current_hour < 18:
-            return "Après-midi"
+            return DayPeriodGrammar.AFTERNOON
         else:
-            return "Soir"
+            return DayPeriodGrammar.EVENING 
 
 # Exemple d'utilisation
 if __name__ == "__main__":
