@@ -1,4 +1,4 @@
-#refacto du la branche srp
+# Dans cette branche on a un Refactoring de la branche srp
 # Application en mode console
 
 ## Version: 1. 
